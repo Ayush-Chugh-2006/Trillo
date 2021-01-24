@@ -216,7 +216,7 @@
 /* ----------------------------- HOTEL OVERVIEW ---------------------------- */
 .overview {
 display: flex;
-border-bottom: 2px solid var(--color-grey-light-2);
+border-bottom: var(--line);
 align-items: center;
 
 &__heading {

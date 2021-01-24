@@ -10,7 +10,7 @@
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: 2px solid var(--color-grey-light-1);
+  border-bottom: var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,4 +34,24 @@
 
   // TODO: remove these only for test purpose
   height: 80rem;
+}
+
+.detail {
+  padding: 4.5rem;
+  display: flex;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+.desctiption {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  background-color: yellowgreen;
+  flex: 1;
 }
