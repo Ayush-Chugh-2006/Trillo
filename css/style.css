@@ -10,7 +10,7 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.08);
   --line: 2px solid var(--color-grey-light-2); }
 
 * {
@@ -27,7 +27,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
@@ -234,8 +234,13 @@ body {
   background-color: transparent;
   cursor: pointer;
   transition: all 0.2s; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left 0.2s; }
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -294,6 +299,48 @@ body {
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
 
+/* --------------------------------- REVIEW --------------------------------- */
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden; }
+  .review:not(:last-child) {
+    margin-bottom: 3.5rem; }
+  .review__text {
+    z-index: 10;
+    position: relative; }
+  .review__user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%; }
+  .review__user-box {
+    flex: 1;
+    margin-left: 1.5rem; }
+  .review__rating {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--color-primary); }
+  .review__btn {
+    display: flex;
+    justify-content: center; }
+  .review::before {
+    content: '\201C';
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    font-size: 20rem;
+    color: var(--color-grey-light-2);
+    line-height: 1;
+    font-family: sans-serif;
+    z-index: 1; }
+
 /*= End of Hotel View =*/
 /*=============================================<<<<<*/
 .container {
@@ -327,13 +374,13 @@ body {
   flex: 1; }
 
 .detail {
+  font-size: 1.4rem;
   padding: 4.5rem;
   display: flex;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line); }
 
 .desctiption {
-  font-size: 1.4rem;
   background-color: #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem;
@@ -341,5 +388,4 @@ body {
   margin-right: 4.5rem; }
 
 .user-reviews {
-  background-color: yellowgreen;
   flex: 1; }
