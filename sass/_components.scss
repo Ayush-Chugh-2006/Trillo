@@ -16,7 +16,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #000;
 
 	&__input {
 		font-family: inherit;
@@ -436,5 +435,17 @@
 	}
 }
 
+/* ----------------------------------- CTA ---------------------------------- */
+.cta {
+	padding: 3.5rem 0;
+	text-align: center;
+
+	&__book-now {
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 1.5rem;
+		margin-bottom: 2.5rem;
+	}
+}
 /*= End of Hotel View =*/
 /*=============================================<<<<<*/
